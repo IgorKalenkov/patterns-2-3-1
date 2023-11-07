@@ -1,15 +1,14 @@
-package ru.netology.delivery.test;
-import ru.netology.delivery.data.DataGenerator;
+package ru.netology.test;
+
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.netology.data.DataGenerator;
 
 import java.time.Duration;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -21,8 +20,8 @@ public class TestDateChange {
     String city = DataGenerator.generateCity();
     String name = DataGenerator.generateName();
     String phone = DataGenerator.generateNumberPhone();
-    String planingDate = dataGenerator.generateDate(5, "dd.MM.yyyy");
-    String changeDate = dataGenerator.generateDate(8, "dd.MM.yyyy");
+    String planingDate = dataGenerator.generateDate(8, "dd.MM.yyyy");
+    String changeDate = dataGenerator.generateDate(11, "dd.MM.yyyy");
 
 
     @BeforeAll
